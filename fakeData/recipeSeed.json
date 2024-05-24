@@ -1,0 +1,172 @@
+[
+  {
+    "title": "cookies",
+    "prepSteps": "1. Preheat oven to 350 degrees F",
+    "servings": 12,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-03-01T00:00:00.000Z",
+    "time": "30 minutes",
+    "difficulty": "easy"
+  },
+  {
+    "title": "brownies",
+    "prepSteps": "1. Preheat oven to 350 degrees F",
+    "servings": 12,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-03-01T00:00:00.000Z",
+    "time": "1 hour",
+    "difficulty": "medium"
+  },
+  {
+    "title": "cake",
+    "prepSteps": "1. Preheat oven to 350 degrees F",
+    "servings": 12,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-03-01T00:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Grilled Salmon with Lemon Herb Butter",
+    "prepSteps": "1. Season salmon fillets with salt, pepper, and herbs.\n2. Grill salmon until flaky.\n3. Make lemon herb butter with butter, lemon zest, and chopped herbs.\n4. Serve salmon with lemon herb butter drizzled on top.",
+    "servings": 2,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-04-05T11:00:00.000Z",
+    "time": "1 hour",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Caprese Salad",
+    "prepSteps": "1. Slice fresh tomatoes and mozzarella cheese.\n2. Arrange tomato and mozzarella slices on a plate.\n3. Drizzle with olive oil and balsamic glaze.\n4. Sprinkle with fresh basil leaves.\n5. Season with salt and pepper.",
+    "servings": 10,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-04-10T09:00:00.000Z",
+    "time": "3 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Shrimp Scampi",
+    "prepSteps": "1. Cook pasta until al dente.\n2. Sauté shrimp in garlic and butter until pink.\n3. Add white wine and lemon juice.\n4. Toss shrimp with cooked pasta.\n5. Garnish with parsley and grated Parmesan.",
+    "servings": 4,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-04-15T17:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "medium"
+  },
+  {
+    "title": "Beef Tacos",
+    "prepSteps": "1. Season ground beef with taco seasoning.\n2. Cook beef until browned.\n3. Warm tortillas.\n4. Assemble tacos with beef, lettuce, cheese, salsa, and sour cream.\n5. Serve with lime wedges.",
+    "servings": 4,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-04-20T15:00:00.000Z",
+    "time": "45 minutes",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Chicken Caesar Salad",
+    "prepSteps": "1. Grill or bake chicken until cooked.\n2. Chop Romaine lettuce and cherry tomatoes.\n3. Toss lettuce with Caesar dressing.\n4. Top with sliced chicken, croutons, and Parmesan cheese.\n5. Serve immediately.",
+    "servings": 4,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-04-25T12:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "medium"
+  },
+  {
+    "title": "Homemade Pizza",
+    "prepSteps": "1. Make pizza dough from scratch or use store-bought.\n2. Roll out dough into a round shape.\n3. Top with pizza sauce, cheese, and your favorite toppings.\n4. Bake in a preheated oven until crust is golden.\n5. Slice and enjoy!",
+    "servings": 7,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-01T10:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Beef Stroganoff",
+    "prepSteps": "1. Sauté onions and mushrooms until softened.\n2. Brown beef strips in the same pan.\n3. Add flour, beef broth, and sour cream.\n4. Simmer until thickened.\n5. Serve over egg noodles.",
+    "servings": 1,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-05T16:00:00.000Z",
+    "time": "55 minutes",
+    "difficulty": "expert"
+  },
+  {
+    "title": "Vegetarian Pad Thai",
+    "prepSteps": "1. Soak rice noodles in hot water until softened.\n2. Stir-fry tofu and vegetables in a wok.\n3. Add soaked noodles, sauce, and bean sprouts.\n4. Cook until everything is heated through.\n5. Garnish with chopped peanuts and lime wedges.",
+    "servings": 6,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-10T14:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Pesto Chicken Pasta",
+    "prepSteps": "1. Cook pasta until al dente.\n2. Sauté chicken in olive oil until cooked.\n3. Mix pesto sauce with cooked pasta.\n4. Toss in chicken, cherry tomatoes, and fresh basil.\n5. Serve hot with grated Parmesan.",
+    "servings": 23,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-15T12:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Beef and Broccoli Stir-Fry",
+    "prepSteps": "1. Slice beef into thin strips.\n2. Marinate beef in soy sauce, garlic, and ginger.\n3. Stir-fry beef until browned.\n4. Add broccoli florets and stir-fry until tender.\n5. Serve over steamed rice.",
+    "servings": 5,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-20T10:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "medium"
+  },
+  {
+    "title": "Lemon Garlic Shrimp Pasta",
+    "prepSteps": "1. Cook pasta until al dente.\n2. Sauté shrimp in butter, garlic, and lemon zest.\n3. Add cooked pasta to the shrimp mixture.\n4. Toss in lemon juice and parsley.\n5. Serve hot with grated Parmesan.",
+    "servings": 8,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-05-25T09:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "expert"
+  },
+  {
+    "title": "Teriyaki Chicken Rice Bowl",
+    "prepSteps": "1. Cook rice according to package instructions.\n2. Sauté chicken in teriyaki sauce until cooked.\n3. Assemble bowls with rice, teriyaki chicken, steamed broccoli, and carrots.\n4. Garnish with sesame seeds and green onions.\n5. Serve hot.",
+    "servings": 4,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-06-01T08:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "medium"
+  },
+  {
+    "title": "Eggplant Parmesan",
+    "prepSteps": "1. Slice eggplant and sprinkle with salt.\n2. Dredge eggplant slices in flour, egg, and breadcrumbs.\n3. Fry eggplant until golden brown.\n4. Layer fried eggplant with marinara sauce and mozzarella cheese.\n5. Bake until cheese is bubbly and golden.",
+    "servings": 2,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-06-05T11:00:00.000Z",
+    "time": "2 hours",
+    "difficulty": "easy"
+  },
+  {
+    "title": "Sushi Rolls",
+    "prepSteps": "1. Cook sushi rice and season with rice vinegar.\n2. Lay out a sheet of nori on a bamboo mat.\n3. Spread rice evenly on the nori sheet.\n4. Add fillings like crab, avocado, cucumber, and fish.\n5. Roll tightly using the bamboo mat.\n6. Slice and serve with soy sauce and wasabi.",
+    "servings": 10,
+    "isPublic": true,
+    "author": 1,
+    "edited": "2021-06-10T10:00:00.000Z",
+    "time": "2 hours 30 minutes",
+    "difficulty": "hard"
+  }
+]

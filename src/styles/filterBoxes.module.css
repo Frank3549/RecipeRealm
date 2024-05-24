@@ -1,0 +1,16 @@
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+.options-list li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.options-list li:hover {
+  background-color: #f0f0f0;
+}

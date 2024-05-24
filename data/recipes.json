@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Classic Spaghetti Carbonara",
+    "servings": 4,
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Bacon",
+      "Parmesan Cheese",
+      "Garlic",
+      "Black Pepper"
+    ],
+    "prepSteps": "Cook pasta, mix eggs and cheese, toss with hot pasta and crispy bacon.",
+    "isPublic": true,
+    "edited": "2024-04-10T10:30:00.000Z",
+    "allergies": [],
+    "dietaryRestrictions": ["None"],
+    "time": 30,
+    "difficulty": 5
+  },
+  {
+    "title": "Grilled Lemon Herb Chicken",
+    "servings": 6,
+    "ingredients": [
+      "Chicken Breasts",
+      "Lemon",
+      "Garlic",
+      "Rosemary",
+      "Olive Oil",
+      "Salt",
+      "Pepper"
+    ],
+    "prepSteps": "Marinate chicken, grill until cooked, squeeze fresh lemon juice before serving.",
+    "isPublic": true,
+    "edited": "2024-04-10T10:30:00.000Z",
+    "allergies": ["None"],
+    "dietaryRestrictions": ["Gluten-free"],
+    "time": 45,
+    "difficulty": 4
+  },
+  {
+    "title": "Vegetarian Quinoa Salad",
+    "servings": 8,
+    "ingredients": [
+      "Quinoa",
+      "Cherry Tomatoes",
+      "Cucumber",
+      "Red Onion",
+      "Avocado",
+      "Feta Cheese",
+      "Lemon Dressing"
+    ],
+    "prepSteps": "Cook quinoa, chop vegetables, toss with dressing and crumbled feta cheese.",
+    "isPublic": false,
+    "edited": "2024-04-10T10:30:00.000Z",
+    "allergies": [],
+    "dietaryRestrictions": ["Vegetarian", "Gluten-free"],
+    "time": 25,
+    "difficulty": 3
+  }
+]

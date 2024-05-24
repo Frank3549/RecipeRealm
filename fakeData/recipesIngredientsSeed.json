@@ -1,0 +1,128 @@
+[
+  {
+    "recipe_id": 1,
+    "ingredient_id": 1,
+    "quantity": 2,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 2,
+    "quantity": 1,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 3,
+    "quantity": 1,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 4,
+    "quantity": 1,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 5,
+    "quantity": 1,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 6,
+    "quantity": 5,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 1,
+    "ingredient_id": 7,
+    "quantity": 1,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 2,
+    "ingredient_id": 17,
+    "quantity": 2,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 3,
+    "ingredient_id": 18,
+    "quantity": 3,
+    "units": "ml"
+  },
+  {
+    "recipe_id": 4,
+    "ingredient_id": 19,
+    "quantity": 4,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 5,
+    "ingredient_id": 20,
+    "quantity": 5,
+    "units": "tsp"
+  },
+  {
+    "recipe_id": 6,
+    "ingredient_id": 21,
+    "quantity": 6,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 7,
+    "ingredient_id": 22,
+    "quantity": 7,
+    "units": "ml"
+  },
+  {
+    "recipe_id": 8,
+    "ingredient_id": 23,
+    "quantity": 8,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 9,
+    "ingredient_id": 24,
+    "quantity": 9,
+    "units": "tsp"
+  },
+  {
+    "recipe_id": 10,
+    "ingredient_id": 25,
+    "quantity": 10,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 11,
+    "ingredient_id": 1,
+    "quantity": 1,
+    "units": "ml"
+  },
+  {
+    "recipe_id": 12,
+    "ingredient_id": 2,
+    "quantity": 2,
+    "units": "tbsp"
+  },
+  {
+    "recipe_id": 13,
+    "ingredient_id": 3,
+    "quantity": 3,
+    "units": "tsp"
+  },
+  {
+    "recipe_id": 14,
+    "ingredient_id": 4,
+    "quantity": 4,
+    "units": "cups"
+  },
+  {
+    "recipe_id": 15,
+    "ingredient_id": 5,
+    "quantity": 5,
+    "units": "ml"
+  }
+]

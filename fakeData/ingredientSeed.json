@@ -1,0 +1,83 @@
+[
+  {
+    "name": "flour"
+  },
+  {
+    "name": "sugar"
+  },
+  {
+    "name": "butter"
+  },
+  {
+    "name": "eggs"
+  },
+  {
+    "name": "milk"
+  },
+  {
+    "name": "vanilla"
+  },
+  {
+    "name": "baking powder"
+  },
+  {
+    "name": "baking soda"
+  },
+  {
+    "name": "salt"
+  },
+  {
+    "name": "cinnamon"
+  },
+  {
+    "name": "nutmeg"
+  },
+  {
+    "name": "cloves"
+  },
+  {
+    "name": "ginger"
+  },
+  {
+    "name": "allspice"
+  },
+  {
+    "name": "pumpkin"
+  },
+  {
+    "name": "chocolate chips"
+  },
+  {
+    "name": "nuts"
+  },
+  {
+    "name": "raisins"
+  },
+  {
+    "name": "oats"
+  },
+  {
+    "name": "coconut"
+  },
+  {
+    "name": "cocoa"
+  },
+  {
+    "name": "peanut butter"
+  },
+  {
+    "name": "jam"
+  },
+  {
+    "name": "honey"
+  },
+  {
+    "name": "maple syrup"
+  },
+  {
+    "name": "molasses"
+  },
+  {
+    "name": "corn syrup"
+  }
+]

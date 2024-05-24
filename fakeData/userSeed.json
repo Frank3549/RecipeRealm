@@ -1,0 +1,14 @@
+[
+  {
+    "username": "John Doe",
+    "email": "jdoe@fake.com",
+    "googleId": "somerandomID1",
+    "created": "2020-01-01T00:00:00Z"
+  },
+  {
+    "username": "Jane Doe",
+    "email": "janedoe@fake.com",
+    "googleId": "someRandomID2",
+    "created": "2020-01-01T00:00:00Z"
+  }
+]
