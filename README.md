@@ -1,4 +1,4 @@
-![workflow status](https://github.com/csci312-s24/project-killington/actions/workflows/node.js.yml/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/frank3549/RecipeRealm/CI?label=build)
 
 Purpose:
 A platform designed to offer a streamlined experience for accessing and crafting recipes, both personal and from others.
@@ -9,7 +9,9 @@ https://killington.csci312.dev/
 How to run locally:
 
 1: Have docker installed
+
 2: Install all required development dependencies with "npm install" in your terminal
+
 3: Create a file .env.development.local with your local postgres database
 Ex: DATABASE_URL= postgres://postgres:postgres@localhost:5432/postgres
 
