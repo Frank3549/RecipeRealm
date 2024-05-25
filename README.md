@@ -3,7 +3,7 @@
 Purpose:
 A platform designed to offer a streamlined experience for accessing and crafting recipes, both personal and from others.
 
-Deployed application:
+Deployed application: (outdated)
 https://killington.csci312.dev/
 
 How to run locally:
