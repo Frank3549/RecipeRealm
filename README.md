@@ -1,4 +1,4 @@
-![workflow status](https://github.com/Frank3549/RecipeReal/actions/workflows/node.js.yml/badge.svg)
+![workflow status](https://github.com/Frank3549/RecipeRealm/actions/workflows/node.js.yml/badge.svg)
 
 Purpose:
 A platform designed to offer a streamlined experience for accessing and crafting recipes, both personal and from others.
