@@ -79,6 +79,7 @@ export default function RecipeCreator({ completeFunction }) {
             type="text"
             name="title"
             placeholder="Recipe Title"
+            required
             value={title}
             onChange={onChange}
             fullWidth
@@ -89,6 +90,7 @@ export default function RecipeCreator({ completeFunction }) {
             type="number"
             step="1"
             name="servings"
+            required
             placeholder="Servings"
             value={servings}
             onChange={onChange}

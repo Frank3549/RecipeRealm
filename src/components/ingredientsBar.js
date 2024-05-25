@@ -108,6 +108,7 @@ function IngredientsBar({ ingredients, setIngredients }) {
               <OutlinedInput
                 type="text"
                 placeholder="Ingredient"
+                required
                 onChange={(event) =>
                   updateIngredientName(
                     event.target.value,
@@ -123,6 +124,7 @@ function IngredientsBar({ ingredients, setIngredients }) {
               <OutlinedInput
                 type="number"
                 step="any"
+                required
                 placeholder="Quantity"
                 onChange={(event) =>
                   updateIngredientQuantity(
@@ -142,6 +144,7 @@ function IngredientsBar({ ingredients, setIngredients }) {
               <Select
                 data-testid="unitType"
                 native
+                required
                 placeholder=""
                 onChange={(event) =>
                   updateIngredientUnit(
