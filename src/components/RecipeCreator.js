@@ -13,7 +13,7 @@ export default function RecipeCreator({ completeFunction }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",
-    servings: 1,
+    servings: undefined,
     prepSteps: "",
     isPublic: false,
     author: session?.user?.id, // Optional Chaining operator used to handle undefined.
@@ -60,7 +60,7 @@ export default function RecipeCreator({ completeFunction }) {
     // Reset the form data after submission
     setFormData({
       title: "",
-      servings: 1,
+      servings: undefined,
       prepSteps: "",
       isPublic: false,
       author: session.user.id,
@@ -115,6 +115,7 @@ export default function RecipeCreator({ completeFunction }) {
             value={prepSteps}
             onChange={onChange}
             fullWidth
+            required
           />
         </Grid>
         <Grid item xs={12}>
