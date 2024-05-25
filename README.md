@@ -1,9 +1,9 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/frank3549/RecipeRealm/CI?label=build)
+![workflow status](https://github.com/Frank3549/RecipeReal/actions/workflows/node.js.yml/badge.svg)
 
 Purpose:
 A platform designed to offer a streamlined experience for accessing and crafting recipes, both personal and from others.
 
-Deployed application: (outdated)
+Deployed application:
 https://killington.csci312.dev/
 
 How to run locally:
