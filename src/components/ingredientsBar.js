@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { styled } from "@mui/system";
 import ingredientShape from "./ingredientShape";
@@ -44,6 +45,7 @@ function IngredientsBar({ ingredients, setIngredients }) {
     "oz (weight)",
     "lbs",
     "pinch",
+    "piece",
   ];
 
   function deleteIngredient(indexInRecipeOfIngredient) {
@@ -143,7 +145,6 @@ function IngredientsBar({ ingredients, setIngredients }) {
               </InputLabel>
               <Select
                 data-testid="unitType"
-                native
                 required
                 placeholder=""
                 onChange={(event) =>
@@ -154,9 +155,9 @@ function IngredientsBar({ ingredients, setIngredients }) {
                 }
               >
                 {units.map((unit) => (
-                  <option key={unit} value={unit}>
+                  <MenuItem key={unit} value={unit}>
                     {unit}
-                  </option>
+                  </MenuItem>
                 ))}
               </Select>
             </FormControl>

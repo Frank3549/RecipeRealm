@@ -17,6 +17,7 @@ Ex: DATABASE_URL= postgres://postgres:postgres@localhost:5432/postgres
 
 4: In order to authenticate with google its required that you provide the following in your .env.local:
 GOOGLE_CLIENT_SECRET=SOMEKEY
+
 GOOGLE_CLIENT_ID=SOMEKEY
 
     You can get Google client secret and ID here:
