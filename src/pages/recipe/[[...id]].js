@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Button } from "@mui/material";
+import { Button, ListItem, List } from "@mui/material";
 import { useSession, signIn } from "next-auth/react";
 
 /* eslint-disable no-console  */
@@ -186,14 +186,14 @@ export default function RecipePage() {
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Ingredients:</InfoLabel>{" "}
-            <IngredientsList>
+            <List sx={{ listStyleType: "disc", marginLeft: "3em" }}>
               {selectedRecipe.ingredients.map((ingredient, index) => (
-                <IngredientItem key={ingredient.id}>
+                <ListItem key={ingredient.id} sx={{ display: "list-item" }}>
                   {ingredient.quantity} {ingredient.units} of {ingredient.name}
                   {index !== selectedRecipe.ingredients.length - 1 && ","}
-                </IngredientItem>
+                </ListItem>
               ))}
-            </IngredientsList>
+            </List>
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Preparation Steps:</InfoLabel> {selectedRecipe.prepSteps}
@@ -264,14 +264,4 @@ const InfoLabel = styled.span`
   font-weight: bold;
   color: #18453b;
   min-width: 100px; /* Adjust as needed */
-`;
-
-const IngredientsList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1; /* Allow the list to take remaining space */
-`;
-
-const IngredientItem = styled.p`
-  margin-right: 10px;
 `;
