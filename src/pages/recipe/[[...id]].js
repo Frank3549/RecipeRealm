@@ -24,7 +24,6 @@ export default function RecipePage() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [fetchedIngredients, setFetchedIngredients] = useState([]);
   const [fetchedTags, setFetchedTags] = useState([]);
-  // const steps = !undefined && selectedRecipe.prepSteps.split("\n");
 
   useEffect(() => {
     // Fetch the recipes ingredients from the database
@@ -175,7 +174,7 @@ export default function RecipePage() {
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Ingredients:</InfoLabel>{" "}
-            <List sx={{ listStyleType: "disc", marginLeft: "3em" }}>
+            <List >
               {selectedRecipe.ingredients.map((ingredient, index) => (
                 <ListItem key={ingredient.id} sx={{ display: "list-item" }}>
                   {ingredient.quantity} {ingredient.units} of {ingredient.name}
@@ -186,6 +185,12 @@ export default function RecipePage() {
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Preparation Steps:</InfoLabel>
+              <div >
+                {selectedRecipe.prepSteps && selectedRecipe.prepSteps.split("\n").map((step, index) => (
+                  /* eslint-disable-next-line react/no-array-index-key */
+                  <p key={index} >{step}</p>)
+                )}
+              </div>
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Dietary Restrictions: </InfoLabel>
