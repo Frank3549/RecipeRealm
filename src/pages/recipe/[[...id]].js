@@ -20,13 +20,11 @@ export default function RecipePage() {
   const router = useRouter();
   const { data: session } = useSession();
   const [isSaved, setIsSaved] = useState();
-
-  // extract recipeid from the URL
   const { id: recipeid } = router.query;
-
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [fetchedIngredients, setFetchedIngredients] = useState([]);
   const [fetchedTags, setFetchedTags] = useState([]);
+  // const steps = !undefined && selectedRecipe.prepSteps.split("\n");
 
   useEffect(() => {
     // Fetch the recipes ingredients from the database
@@ -68,17 +66,8 @@ export default function RecipePage() {
     // Fetch the recipe from the database and fill in it's fields
     const response = await fetch(`/api/recipes/${+recipeid}`);
     const recipe = await response.json();
-
     setSelectedRecipe({
-      title: recipe.title,
-      servings: recipe.servings,
-      prepSteps: recipe.prepSteps,
-      author: recipe.author,
-      isPublic: recipe.isPublic,
-      id: +recipeid,
-      edited: recipe.edited,
-      difficulty: recipe.difficulty,
-      time: recipe.time,
+      ...recipe,
       ingredients: fetchedIngredients,
       tags: fetchedTags,
     });
@@ -196,7 +185,7 @@ export default function RecipePage() {
             </List>
           </RecipeInfo>
           <RecipeInfo>
-            <InfoLabel>Preparation Steps:</InfoLabel> {selectedRecipe.prepSteps}
+            <InfoLabel>Preparation Steps:</InfoLabel>
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Dietary Restrictions: </InfoLabel>
