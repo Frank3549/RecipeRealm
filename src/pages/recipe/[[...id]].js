@@ -74,7 +74,7 @@ export default function RecipePage() {
 
   useEffect(() => {
     getRecipe();
-  });
+  },[recipeid, fetchedIngredients, fetchedTags]);
 
   // Write a callback to the save button that will save the recipe to the user's account (using the user_recipes table in the database)
 
@@ -173,10 +173,10 @@ export default function RecipePage() {
             <InfoLabel>Servings:</InfoLabel> {selectedRecipe.servings}
           </RecipeInfo>
           <RecipeInfo>
-            <InfoLabel>Ingredients:</InfoLabel>{" "}
-            <List >
+            <InfoLabel>Ingredients: </InfoLabel>
+            <List sx={{listStyleType: 'disc'}}>
               {selectedRecipe.ingredients.map((ingredient, index) => (
-                <ListItem key={ingredient.id} sx={{ display: "list-item" }}>
+                <ListItem key={ingredient.id} sx={{ display: "list-item" }} style={{marginLeft: '2em', paddingLeft: '0px'}}>
                   {ingredient.quantity} {ingredient.units} of {ingredient.name}
                   {index !== selectedRecipe.ingredients.length - 1 && ","}
                 </ListItem>
@@ -185,7 +185,7 @@ export default function RecipePage() {
           </RecipeInfo>
           <RecipeInfo>
             <InfoLabel>Preparation Steps:</InfoLabel>
-              <div >
+              <div style={{marginLeft: '2em'}}>
                 {selectedRecipe.prepSteps && selectedRecipe.prepSteps.split("\n").map((step, index) => (
                   /* eslint-disable-next-line react/no-array-index-key */
                   <p key={index} >{step}</p>)
@@ -248,7 +248,7 @@ const RecipeTitle = styled.h3`
   margin-bottom: 20px;
 `;
 
-const RecipeInfo = styled.p`
+const RecipeInfo = styled.div`
   margin: 10px 0;
   font-size: 1em;
   line-height: 1.5;
