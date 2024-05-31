@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import { Button } from "@mui/material";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
+import FastFoodIcon from "@mui/icons-material/Fastfood";
 
 const Container = styled("div")(({ theme: styledTheme }) => ({
   marginTop: styledTheme.spacing(0),
@@ -24,6 +24,7 @@ const capitalizeFirstLetter = (string) => {
     .join(" ");
 };
 function RecipeTitles({ recipes, setSelectedRecipe }) {
+
   return (
     <Container>
       <div
@@ -75,7 +76,7 @@ function RecipeTitles({ recipes, setSelectedRecipe }) {
                 pointerEvents: "none", // Make sure the icon doesn't interfere with interactions
               }}
             >
-              <FastfoodIcon fontSize="inherit" />
+              <FastFoodIcon fontSize="inherit" />
             </div>
             <h3
               style={{

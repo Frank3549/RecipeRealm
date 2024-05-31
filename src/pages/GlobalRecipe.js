@@ -38,7 +38,7 @@ function GlobalRecipe({ selectedRecipe, setSelectedRecipe }) {
     <div>
       <SearchBar searchKeywords={searchKeywords} />
       <RecipeTitles
-        recipes={recipes}
+        recipes={recipes.filter((recipe) => recipe.isPublic)}
         selectedRecipe={selectedRecipe}
         setSelectedRecipe={setSelectedRecipe}
       />
