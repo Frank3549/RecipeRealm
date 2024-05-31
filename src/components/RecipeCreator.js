@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import { Grid, TextField, InputLabel, Button } from "@mui/material";
 import { useSession } from "next-auth/react";
-import styles from "../styles/Editor.module.css";
 import FilterOptions from "./FilterOptions";
 import IngredientsBar from "./ingredientsBar";
 
@@ -73,7 +72,7 @@ export default function RecipeCreator({ completeFunction }) {
 
   return (
     <form onSubmit={onSubmit}>
-      <Grid container spacing={2} className={styles.editor}>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
             type="text"

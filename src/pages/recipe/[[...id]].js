@@ -74,7 +74,7 @@ export default function RecipePage() {
 
   useEffect(() => {
     getRecipe();
-  },[recipeid, fetchedIngredients, fetchedTags]);
+  },);
 
   // Write a callback to the save button that will save the recipe to the user's account (using the user_recipes table in the database)
 

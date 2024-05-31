@@ -2,13 +2,13 @@ import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useSession, signIn } from "next-auth/react"; // Import useSession hook
+import { useSession, signIn } from "next-auth/react";
 import sushiImage from "../material/images/sushi-png.webp";
 
 const Container = styled("div")(({ theme: styledTheme }) => ({
   marginTop: styledTheme.spacing(0),
-  paddingTop: styledTheme.spacing(10), // This adds space at the top
-  paddingBottom: styledTheme.spacing(25), // Add padding at the bottom to increase height
+  paddingTop: styledTheme.spacing(10),
+  paddingBottom: styledTheme.spacing(25), 
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -103,6 +103,7 @@ function HomePage() {
         </Right>
         <Left>
           <Image
+            priority
             src={sushiImage}
             width={600}
             height={400}

@@ -97,7 +97,7 @@ function IngredientsBar({ ingredients, setIngredients }) {
 
     setIngredients([
       ...ingredients,
-      { name: "", quantity: 0.0, unit: "cups", indexInRecipe: nextIndex + 1 },
+      { name: "", quantity: 0.0, unit: "", indexInRecipe: nextIndex + 1 },
     ]);
   }
 
@@ -144,9 +144,9 @@ function IngredientsBar({ ingredients, setIngredients }) {
                 Unit
               </InputLabel>
               <Select
+                defaultValue=''
                 data-testid="unitType"
                 required
-                placeholder=""
                 onChange={(event) =>
                   updateIngredientUnit(
                     event.target.value,
