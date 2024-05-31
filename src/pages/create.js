@@ -17,7 +17,7 @@ export default function Creator() {
       });
 
       if (response.ok) {
-        router.push("/GlobalRecipe");
+        router.push("/recipes");
       }
     } else {
       router.back();

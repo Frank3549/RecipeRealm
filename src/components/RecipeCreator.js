@@ -54,7 +54,7 @@ export default function RecipeCreator({ completeFunction }) {
       tags: [...foodAllergiesSelected, ...dietaryRestrictionsSelected],
     };
     await completeFunction(newRecipe);
-    router.push("/GlobalRecipe");
+    router.push("/recipes");
 
     // Reset the form data after submission
     setFormData({

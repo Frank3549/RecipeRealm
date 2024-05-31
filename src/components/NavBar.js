@@ -39,14 +39,14 @@ const Left = styled("div")(({ theme: styledTheme }) => ({
 function Navbar() {
   const router = useRouter();
   const onClick = () => {
-    router.push(`/Home`);
+    router.push(`/home`);
   };
   const onLogin = () => {
     router.push(`/login`);
   };
 
   const onRecipe = () => {
-    router.push(`/GlobalRecipe`);
+    router.push(`/recipes`);
   };
 
   const { data: session } = useSession(); // Retrieve the session data

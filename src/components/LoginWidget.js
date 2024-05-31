@@ -15,7 +15,7 @@ export default function LoginWidget() {
   const { data: session } = useSession();
 
   const handleSignInAndRedirect = async () => {
-    await signIn("google", { callbackUrl: "/GlobalRecipe" });
+    await signIn("google", { callbackUrl: "/recipes" });
   };
 
   const handleProfile = async () => {

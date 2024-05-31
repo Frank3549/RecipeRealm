@@ -21,9 +21,9 @@ export default function App({
   const setSelectedRecipe = (recipe) => {
     if (recipe) {
       setSelectedRecipeState(recipe);
-      router.push(`/recipe/${recipe.id}`);
+      router.push(`/recipes/${recipe.id}`);
     } else {
-      router.push("/GlobalRecipe");
+      router.push("/recipes");
     }
   };
   const props = {

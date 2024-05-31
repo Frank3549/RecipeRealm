@@ -34,17 +34,10 @@ describe.skip("Recipe Creation UI tests", () => {
     expect(useRouter).toHaveBeenCalledTimes(1);
     expect(useRouter().push).toHaveBeenCalledWith("/create");
 
-    // const { RecipeCreator } = await import('../components/RecipeCreator');
     render(<RecipeCreator completeFunction={jest.fn()} />);
 
     const recipeCreator2 = screen.getByTestId("RecipeCreatorTestId");
     expect(recipeCreator2).toBeInTheDocument();
 
-    // expect(screen.queryByTestId("getStartedButton")).toBeNull();
-
-    // Check if RecipeCreator component is rendered
-    // expect(recipeCreator2).toBeInTheDocument();
-    // const recipeCreator2 = screen.queryByTestId("RecipeCreatorTestId");
-    // expect(recipeCreator2).not.toBeNull();
   });
 });

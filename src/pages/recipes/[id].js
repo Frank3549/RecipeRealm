@@ -115,7 +115,7 @@ export default function RecipePage() {
       // eslint-disable-next-line no-alert
       alert("Please sign in to save the recipe.");
       // Redirect the user to the sign in page
-      await signIn("google", { callbackUrl: "/GlobalRecipe" });
+      await signIn("google", { callbackUrl: "/recipes" });
     }
   };
 
@@ -142,7 +142,7 @@ export default function RecipePage() {
       // eslint-disable-next-line no-alert
       alert("Please sign in to remove the recipe.");
       // Redirect the user to the sign in page
-      await signIn("google", { callbackUrl: "/GlobalRecipe" });
+      await signIn("google", { callbackUrl: "/recipes" });
     }
   };
 

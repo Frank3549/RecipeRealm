@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import GlobalRecipe from "../pages/GlobalRecipe";
+import GlobalRecipe from "../pages/recipes";
 
 describe.skip("Search Bar and FilterComponents are rendered", () => {
   test("Search bar is rendered", () => {

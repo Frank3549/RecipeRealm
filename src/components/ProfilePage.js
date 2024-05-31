@@ -31,15 +31,15 @@ function ProfilePage() {
 
   const setSelectedRecipe = (recipe) => {
     if (recipe) {
-      router.push(`/recipe/${recipe.id}`);
+      router.push(`recipes/${recipe.id}`);
     } else {
-      router.push("/GlobalRecipe");
+      router.push("/recipes");
     }
   };
 
   const handleSignOut = async () => {
     await signOut();
-    router.push("/Home"); // Redirect to home page after sign-out
+    router.push("/home"); // Redirect to home page after sign-out
   };
 
   const Container = styled("div")(({ theme: styledTheme }) => ({

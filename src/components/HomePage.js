@@ -56,7 +56,7 @@ function HomePage() {
     if (session) {
       router.push(`/create`); // If user is authenticated, navigate to create page
     } else {
-      await signIn("google", { callbackUrl: "/GlobalRecipe" });
+      await signIn("google", { callbackUrl: "/recipes" });
     }
   };
 
