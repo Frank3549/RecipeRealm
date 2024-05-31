@@ -21,7 +21,6 @@ export default class Recipe extends BaseModel {
         id: { type: "integer" },
         title: { type: "string" },
         prepSteps: { type: "string", default: "" },
-        // servings: { type: "string" },
         servings: { type: "integer", default: 1 },
         isPublic: { type: "boolean", default: false },
         author: { type: "integer" },
