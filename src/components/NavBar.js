@@ -21,6 +21,7 @@ const Wrapper = styled("div")(({ theme: styledTheme }) => ({
 const Logo = styled("h1")(({ theme: styledTheme }) => ({
   fontWeight: "bold",
   marginTop: styledTheme.spacing(0),
+  cursor: 'pointer'
 }));
 
 const Right = styled("div")(({ theme: styledTheme }) => ({
@@ -55,7 +56,7 @@ function Navbar() {
     <Container>
       <Wrapper>
         <Right>
-          <Logo>RecipeRealm</Logo>
+          <Logo onClick={()=> router.push(`/home`)}>RecipeRealm</Logo>
         </Right>
         <Left>
           <Button
