@@ -8,25 +8,60 @@ import RecipeTitles from "./RecipeTitles";
 function ProfilePage() {
   const router = useRouter();
   const { data: session } = useSession();
+  const [combinedRecipes, setCombinedRecipes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasRecipes, setHasRecipes] = useState(false);
 
-  const [savedRecipes, setSavedRecipes] = useState([]);
+  const combineAuthorAndSavedRecipes = (saved, authors) => {
+    const combinedRecipeArray = [...saved, ...authors];
+    const uniqueID = new Set();
+    const uniqueRecipeArray = combinedRecipeArray.filter((recipe) => {
+      if (uniqueID.has(recipe.id)) {
+        return false;
+      }
+      uniqueID.add(recipe.id);
+      return true;
+    });
+    return uniqueRecipeArray;
+  };
 
   useEffect(() => {
-    const fetchSavedRecipes = async () => {
+    const fetchAuthorAndSavedRecipes = async () => {
       if (session) {
-        const response = await fetch(
-          `/api/user_recipes?user_id=${session.user.id}`,
-        );
-        if (response.ok) {
-          const data = await response.json();
-          setSavedRecipes(data);
-        } else {
-          // eslint-disable-next-line no-console
-          console.error("Failed to fetch saved recipes");
+        try {
+          const response1 = await fetch(
+            `/api/user_recipes?user_id=${session.user.id}`,
+          );
+          const response2 = await fetch(
+            `/api/recipes/author/${session.user.id}`,
+          );
+
+          if (response1.ok && response2.ok) {
+            const savedData = await response1.json();
+            const authorData = await response2.json();
+            const combined = combineAuthorAndSavedRecipes(
+              savedData,
+              authorData,
+            );
+
+            setCombinedRecipes(combined);
+            setHasRecipes(combined.length > 0);
+          } else {
+            if (!response1.ok) console.error("Failed to fetch savedRecipes");
+            if (!response2.ok) console.error("Failed to fetch authorRecipes");
+          }
+        } catch (error) {
+          console.error("Error fetching recipes:", error);
+        } finally {
+          setIsLoading(false);
         }
+      } else {
+        console.error("User session is not valid");
+        setIsLoading(false);
       }
     };
-    fetchSavedRecipes();
+
+    fetchAuthorAndSavedRecipes();
   }, [session, router]);
 
   const setSelectedRecipe = (recipe) => {
@@ -56,17 +91,23 @@ function ProfilePage() {
     <Container>
       {session && (
         <div style={{ fontSize: "4em" }}>
-          Welcome <b style={{ color: "purple" }}> {session.user.name} </b>!{" "}
+          Welcome back
+          <b style={{ color: "purple" }}> {session.user.name.split(" ")[0]}</b>!{" "}
           <LogoutIcon
             onClick={handleSignOut}
             style={{ cursor: "pointer", fontSize: "0.7em" }}
           />
         </div>
       )}
-      <RecipeTitles
-        recipes={savedRecipes}
-        setSelectedRecipe={(recipe) => setSelectedRecipe(recipe)}
-      />
+
+      {isLoading && <h2>Loading....</h2>}
+      {!isLoading && hasRecipes && (
+        <RecipeTitles
+          recipes={combinedRecipes}
+          setSelectedRecipe={(recipe) => setSelectedRecipe(recipe)}
+        />
+      )}
+      {!isLoading && !hasRecipes && <h2>No recipes saved</h2>}
     </Container>
   );
 }
