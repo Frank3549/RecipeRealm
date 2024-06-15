@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -6,15 +7,7 @@ import { useSession, signIn } from "next-auth/react";
 
 /* eslint-disable no-console  */
 
-const buttonStyle = {
-  backgroundColor: "#18453B",
-  color: "white",
-  textTransform: "none",
-  fontSize: "1em",
-  padding: "10px 20px",
-  margin: "10px 0",
-  borderRadius: "5px",
-};
+
 
 export default function RecipePage() {
   const router = useRouter();
@@ -24,6 +17,16 @@ export default function RecipePage() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [fetchedIngredients, setFetchedIngredients] = useState([]);
   const [fetchedTags, setFetchedTags] = useState([]);
+
+  const buttonStyle = {
+    backgroundColor: "#18453B",
+    color: "white",
+    textTransform: "none",
+    fontSize: "1em",
+    padding: "10px 20px",
+    margin: "10px 0",
+    borderRadius: "5px",
+  };
 
   useEffect(() => {
     // Fetch the recipes ingredients from the database
@@ -88,6 +91,7 @@ export default function RecipePage() {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
   };
+
   // Write a callback to the save button that will save the recipe to the user's account (using the user_recipes table in the database)
   const saveRecipe = async () => {
     if (session) {
@@ -111,8 +115,6 @@ export default function RecipePage() {
         setIsSaved(false);
       }
     } else {
-      // If the user is not signed in, prompt them to sign in
-      // eslint-disable-next-line no-alert
       alert("Please sign in to save the recipe.");
       // Redirect the user to the sign in page
       await signIn("google", { callbackUrl: "/recipes" });
@@ -135,16 +137,38 @@ export default function RecipePage() {
       if (response.ok) {
         setIsSaved(false);
       } else {
-        setIsSaved(false);
+        setIsSaved(true);
       }
     } else {
-      // If the user is not signed in, prompt them to sign in
-      // eslint-disable-next-line no-alert
       alert("Please sign in to remove the recipe.");
-      // Redirect the user to the sign in page
       await signIn("google", { callbackUrl: "/recipes" });
     }
   };
+
+  const deleteRecipe = async () => {
+    if(session) {
+      const response = await fetch("/api/recipes/", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          recipeId: +recipeid,
+          userId: session.user.id,
+        }),
+      });
+      if (response.ok) {
+        alert("Recipe deleted successfully");
+        router.back();
+      } else {
+        console.log("Recipe Id trying to delete ", recipeid)
+        alert("Failed to delete recipe");
+      }
+    } else {
+      alert("Please sign in to remove the recipe.");
+      await signIn("google", { callbackUrl: "/recipes" });
+    }
+  }
 
   useEffect(() => {
     const checkIfSaved = async () => {
@@ -213,15 +237,23 @@ export default function RecipePage() {
             <InfoLabel>Difficulty:</InfoLabel> {selectedRecipe.difficulty}
           </RecipeInfo>
 
-          {isSaved ? (
-            <Button onClick={unSaveRecipe} style={buttonStyle}>
-              Unsave Recipe
+          {/* eslint-disable-next-line no-nested-ternary */}
+          {selectedRecipe.author === session.user.id ? (
+            <Button onClick={deleteRecipe} style={buttonStyle}>
+              Delete Recipe
             </Button>
           ) : (
-            <Button onClick={saveRecipe} style={buttonStyle}>
-              Save Recipe
-            </Button>
+            isSaved ? (
+              <Button onClick={unSaveRecipe} style={buttonStyle}>
+                Unsave Recipe
+              </Button>
+            ) : (
+              <Button onClick={saveRecipe} style={buttonStyle}>
+                Save Recipe
+              </Button>
+            )
           )}
+
         </RecipeDetailsCard>
       )}
     </Container>

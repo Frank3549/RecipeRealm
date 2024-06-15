@@ -5,7 +5,6 @@ import Ingredient from "../../../../models/Ingredient";
 import Tags from "../../../../models/Tags";
 
 const router = createRouter();
-
 router
   .get(async (req, res) => {
     // Implement endpoint to fetch all articles (deleting placeholder response code below),
@@ -77,6 +76,23 @@ router
       res.status(200).json(recipe);
     } catch (error) {
       res.status(500).json({ error: error.message });
+    }
+  })
+  .delete(async (req, res) => {
+    const {userId, recipeId} = req.body;
+    try {
+      const recipe = await Recipe.query().findById(recipeId);
+      if (!recipe) {
+        return res.status(404).json({ error: "Recipe not found" });
+      }
+      if (userId === recipe.author) {
+        await Recipe.query().deleteById(recipeId);
+      } else {
+        return res.status(403).json({ error: "Unauthorized" });
+      }
+      return res.status(200).json({ message: "Recipe deleted successfully" });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
     }
   });
 
