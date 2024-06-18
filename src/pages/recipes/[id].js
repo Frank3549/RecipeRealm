@@ -4,12 +4,14 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Button, ListItem, List } from "@mui/material";
 import { useSession, signIn } from "next-auth/react";
+import AlertDialog from "../../components/DeleteConfirmation";
 
 /* eslint-disable no-console  */
 
 
 
 export default function RecipePage() {
+
   const router = useRouter();
   const { data: session } = useSession();
   const [isSaved, setIsSaved] = useState();
@@ -239,9 +241,7 @@ export default function RecipePage() {
 
           {/* eslint-disable-next-line no-nested-ternary */}
           {selectedRecipe.author === session.user.id ? (
-            <Button onClick={deleteRecipe} style={buttonStyle}>
-              Delete Recipe
-            </Button>
+            <AlertDialog/>
           ) : (
             isSaved ? (
               <Button onClick={unSaveRecipe} style={buttonStyle}>
