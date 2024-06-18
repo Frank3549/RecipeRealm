@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import PropTypes from "prop-types";
 
-export default function AlertDialog({deleteRecipe}) {
+export default function AlertDialog({ deleteRecipe }) {
   const [open, setOpen] = React.useState(false);
 
   const buttonStyle = {
@@ -25,7 +26,7 @@ export default function AlertDialog({deleteRecipe}) {
 
   const handleClose = () => {
     setOpen(false);
-    deleteRecipe()
+    deleteRecipe();
   };
 
   return (
@@ -39,9 +40,7 @@ export default function AlertDialog({deleteRecipe}) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-            Delete Recipe?
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">Delete Recipe?</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Are you sure you want to delete this recipe?
@@ -57,3 +56,7 @@ export default function AlertDialog({deleteRecipe}) {
     </>
   );
 }
+
+AlertDialog.propTypes = {
+  deleteRecipe: PropTypes.func.isRequired,
+};

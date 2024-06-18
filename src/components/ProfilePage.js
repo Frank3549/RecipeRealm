@@ -92,7 +92,10 @@ function ProfilePage() {
       {session && (
         <div style={{ fontSize: "4em" }}>
           Welcome back
-          <b style={{ color: "purple" }}> {session.user.name.split(" ")[0]}</b>!{" "}
+          <b style={{ color: "purple" }}>
+            {" "}
+            {session.user.name.split(" ")[0]}
+          </b>!{" "}
           <LogoutIcon
             onClick={handleSignOut}
             style={{ cursor: "pointer", fontSize: "0.7em" }}
