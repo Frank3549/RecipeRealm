@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Button, ListItem, List } from "@mui/material";
 import { useSession, signIn } from "next-auth/react";
-import AlertDialog from "../../components/DeleteConfirmation";
+import AlertDialog from "../../components/AlertDialog";
 
 /* eslint-disable no-console  */
 
@@ -160,10 +160,8 @@ export default function RecipePage() {
         }),
       });
       if (response.ok) {
-        alert("Recipe deleted successfully");
-        router.back();
+        router.push("/recipes");
       } else {
-        console.log("Recipe Id trying to delete ", recipeid)
         alert("Failed to delete recipe");
       }
     } else {
@@ -241,7 +239,7 @@ export default function RecipePage() {
 
           {/* eslint-disable-next-line no-nested-ternary */}
           {selectedRecipe.author === session.user.id ? (
-            <AlertDialog/>
+            <AlertDialog deleteRecipe={deleteRecipe}/>
           ) : (
             isSaved ? (
               <Button onClick={unSaveRecipe} style={buttonStyle}>
