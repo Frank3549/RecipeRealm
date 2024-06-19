@@ -25,7 +25,7 @@ export default class Recipe extends BaseModel {
         isPublic: { type: "boolean", default: false },
         author: { type: "integer" },
         edited: { type: "string", format: "date-time" },
-        time: { type: "string", default: "60 minutes" },
+        time: { type: "string" },
         difficulty: { type: "string", default: "Easy" },
       },
     };
