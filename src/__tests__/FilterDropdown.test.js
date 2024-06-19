@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import FilterDropdown from "../components/FilterDropdown";
+import FilterDropdown from "../components/CheckboxDropdown";
 
 describe("FilterDropdown Correct text output", () => {
   const options = ["Option 1", "Option 2", "Option 3"];

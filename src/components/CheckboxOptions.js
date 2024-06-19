@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
-import FilterDropdown from "@/components/FilterDropdown";
+import FilterDropdown from "@/components/CheckboxDropdown";
 import allergiesOptions from "../../data/allergies.json";
 import dietaryRestrictionsOptions from "../../data/dietaryRestrictions.json";
 import timeOptions from "../../data/time.json";
@@ -35,8 +35,6 @@ const Right = styled("div")(({ theme: styledTheme }) => ({
 export default function FilterOptions({
   setFoodAllergiesSelected,
   setDietaryRestrictionsSelected,
-  setTimeSelected,
-  setDifficultySelected,
 }) {
   return (
     <Container>
@@ -51,16 +49,6 @@ export default function FilterOptions({
             title="Dietary Restrictions"
             options={dietaryRestrictionsOptions}
             onSelect={setDietaryRestrictionsSelected}
-          />
-          <FilterDropdown
-            title="Time"
-            options={timeOptions}
-            onSelect={setTimeSelected}
-          />
-          <FilterDropdown
-            title="Difficulty"
-            options={difficultyOptions}
-            onSelect={setDifficultySelected}
           />
         </Right>
       </Wrapper>

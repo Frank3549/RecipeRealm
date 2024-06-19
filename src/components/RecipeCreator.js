@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import { Grid, TextField, InputLabel, Button } from "@mui/material";
 import { useSession } from "next-auth/react";
-import FilterOptions from "./FilterOptions";
+import FilterOptions from "./CheckboxOptions";
 import IngredientsBar from "./ingredientsBar";
 
 export default function RecipeCreator({ completeFunction }) {
@@ -29,6 +29,11 @@ export default function RecipeCreator({ completeFunction }) {
   const [timeSelected, setTimeSelected] = useState([]);
   const [difficultySelected, setDifficultySelected] = useState([]);
   /* eslint-disable no-unused-vars */
+
+  const timeAndDifficulty = (difficultySelected) => {
+    setDifficultySelected(difficultySelected);
+    console.log("Difficulty Selected: ", difficultySelected);
+  }
 
   const { title, servings, prepSteps, author, isPublic } = formData;
 
@@ -139,7 +144,7 @@ export default function RecipeCreator({ completeFunction }) {
             setFoodAllergiesSelected={setFoodAllergiesSelected}
             setDietaryRestrictionsSelected={setDietaryRestrictionsSelected}
             setTimeSelected={setTimeSelected}
-            setDifficultySelected={setDifficultySelected}
+            setDifficultySelected={timeAndDifficulty}
           />
         </Grid>
         <Grid item xs={12}>
