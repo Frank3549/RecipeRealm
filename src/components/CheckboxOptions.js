@@ -3,8 +3,7 @@ import { styled } from "@mui/material/styles";
 import FilterDropdown from "@/components/CheckboxDropdown";
 import allergiesOptions from "../../data/allergies.json";
 import dietaryRestrictionsOptions from "../../data/dietaryRestrictions.json";
-import timeOptions from "../../data/time.json";
-import difficultyOptions from "../../data/difficulty.json";
+
 
 /*
  */

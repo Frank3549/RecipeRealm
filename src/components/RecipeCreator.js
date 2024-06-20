@@ -5,6 +5,8 @@ import { Grid, TextField, InputLabel, Button } from "@mui/material";
 import { useSession } from "next-auth/react";
 import FilterOptions from "./CheckboxOptions";
 import IngredientsBar from "./ingredientsBar";
+import RadioButtonsGroup from "./RadioOptions";
+import difficultyOptions from "../../data/difficulty.json";
 
 export default function RecipeCreator({ completeFunction }) {
   const { data: session } = useSession();
@@ -27,12 +29,12 @@ export default function RecipeCreator({ completeFunction }) {
   const [dietaryRestrictionsSelected, setDietaryRestrictionsSelected] =
     useState([]);
   const [timeSelected, setTimeSelected] = useState([]);
-  const [difficultySelected, setDifficultySelected] = useState([]);
+  const [difficultySelected, setDifficultySelected] = useState("");
   /* eslint-disable no-unused-vars */
 
-  const timeAndDifficulty = (difficultySelected) => {
-    setDifficultySelected(difficultySelected);
-    console.log("Difficulty Selected: ", difficultySelected);
+  const timeAndDifficulty = (optionSelected) => {
+    console.log("Difficulty Selected", optionSelected);
+    setDifficultySelected(optionSelected);
   }
 
   const { title, servings, prepSteps, author, isPublic } = formData;
@@ -143,9 +145,13 @@ export default function RecipeCreator({ completeFunction }) {
           <FilterOptions
             setFoodAllergiesSelected={setFoodAllergiesSelected}
             setDietaryRestrictionsSelected={setDietaryRestrictionsSelected}
-            setTimeSelected={setTimeSelected}
-            setDifficultySelected={timeAndDifficulty}
           />
+          <RadioButtonsGroup 
+            options={difficultyOptions} 
+            buttonGroupName="Difficulty" 
+            visableName="Difficulty" 
+          />
+          
         </Grid>
         <Grid item xs={12}>
           <Button
