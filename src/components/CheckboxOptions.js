@@ -4,7 +4,6 @@ import FilterDropdown from "@/components/CheckboxDropdown";
 import allergiesOptions from "../../data/allergies.json";
 import dietaryRestrictionsOptions from "../../data/dietaryRestrictions.json";
 
-
 /*
  */
 
@@ -58,6 +57,4 @@ export default function FilterOptions({
 FilterOptions.propTypes = {
   setFoodAllergiesSelected: PropTypes.func.isRequired,
   setDietaryRestrictionsSelected: PropTypes.func.isRequired,
-  setTimeSelected: PropTypes.func.isRequired,
-  setDifficultySelected: PropTypes.func.isRequired,
 };

@@ -35,9 +35,9 @@ export default function RecipeCreator({ completeFunction }) {
   const timeAndDifficulty = (optionSelected) => {
     console.log("Difficulty Selected", optionSelected);
     setDifficultySelected(optionSelected);
-  }
+  };
 
-  const { title, servings, prepSteps, author, isPublic } = formData;
+  const { title, time, servings, prepSteps, author, isPublic } = formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -51,6 +51,7 @@ export default function RecipeCreator({ completeFunction }) {
     const currentDate = new Date().toISOString();
     const newRecipe = {
       title,
+      time,
       servings: +servings,
       prepSteps,
       isPublic,
@@ -66,6 +67,7 @@ export default function RecipeCreator({ completeFunction }) {
     // Reset the form data after submission
     setFormData({
       title: "",
+      time: "",
       servings: undefined,
       prepSteps: "",
       isPublic: false,
@@ -80,13 +82,24 @@ export default function RecipeCreator({ completeFunction }) {
   return (
     <form onSubmit={onSubmit}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid item xs={9}>
           <TextField
             type="text"
             name="title"
             placeholder="Recipe Title"
             required
             value={title}
+            onChange={onChange}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <TextField
+            type="text"
+            name="time"
+            placeholder="Time To Prepare"
+            required
+            value={time}
             onChange={onChange}
             fullWidth
           />
@@ -141,17 +154,18 @@ export default function RecipeCreator({ completeFunction }) {
             />
           </InputLabel>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={3}>
           <FilterOptions
             setFoodAllergiesSelected={setFoodAllergiesSelected}
             setDietaryRestrictionsSelected={setDietaryRestrictionsSelected}
           />
-          <RadioButtonsGroup 
-            options={difficultyOptions} 
-            buttonGroupName="Difficulty" 
-            visableName="Difficulty" 
+        </Grid>
+        <Grid item xs={6}>
+          <RadioButtonsGroup
+            options={difficultyOptions}
+            buttonGroupName="Difficulty"
+            visableName="Difficulty"
           />
-          
         </Grid>
         <Grid item xs={12}>
           <Button

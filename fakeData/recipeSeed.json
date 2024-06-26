@@ -6,7 +6,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-03-01T00:00:00.000Z",
-    "time": "30 minutes",
+    "time": 21,
     "difficulty": "easy"
   },
   {
@@ -16,7 +16,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-03-01T00:00:00.000Z",
-    "time": "1 hour",
+    "time": 60,
     "difficulty": "medium"
   },
   {
@@ -26,7 +26,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-03-01T00:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "easy"
   },
   {
@@ -36,7 +36,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-04-05T11:00:00.000Z",
-    "time": "1 hour",
+    "time": 60,
     "difficulty": "easy"
   },
   {
@@ -46,7 +46,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-04-10T09:00:00.000Z",
-    "time": "3 hours",
+    "time": 180,
     "difficulty": "easy"
   },
   {
@@ -56,7 +56,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-04-15T17:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "medium"
   },
   {
@@ -66,7 +66,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-04-20T15:00:00.000Z",
-    "time": "45 minutes",
+    "time": 45,
     "difficulty": "easy"
   },
   {
@@ -76,7 +76,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-04-25T12:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "medium"
   },
   {
@@ -86,7 +86,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-01T10:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "easy"
   },
   {
@@ -96,7 +96,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-05T16:00:00.000Z",
-    "time": "55 minutes",
+    "time": 55,
     "difficulty": "expert"
   },
   {
@@ -106,7 +106,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-10T14:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "easy"
   },
   {
@@ -116,7 +116,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-15T12:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "easy"
   },
   {
@@ -126,7 +126,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-20T10:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "medium"
   },
   {
@@ -136,7 +136,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-05-25T09:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "expert"
   },
   {
@@ -146,7 +146,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-06-01T08:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "medium"
   },
   {
@@ -156,17 +156,7 @@
     "isPublic": true,
     "author": 1,
     "edited": "2021-06-05T11:00:00.000Z",
-    "time": "2 hours",
+    "time": 120,
     "difficulty": "easy"
-  },
-  {
-    "title": "Sushi Rolls",
-    "prepSteps": "1. Cook sushi rice and season with rice vinegar.\n2. Lay out a sheet of nori on a bamboo mat.\n3. Spread rice evenly on the nori sheet.\n4. Add fillings like crab, avocado, cucumber, and fish.\n5. Roll tightly using the bamboo mat.\n6. Slice and serve with soy sauce and wasabi.",
-    "servings": 10,
-    "isPublic": true,
-    "author": 1,
-    "edited": "2021-06-10T10:00:00.000Z",
-    "time": "2 hours 30 minutes",
-    "difficulty": "hard"
   }
 ]

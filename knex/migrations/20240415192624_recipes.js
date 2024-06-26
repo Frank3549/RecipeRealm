@@ -19,7 +19,7 @@ exports.up = function (knex) {
       .inTable("users")
       .onDelete("CASCADE");
     table.timestamp("edited").defaultTo(knex.fn.now());
-    table.string("time").notNullable();
+    table.integer("time").notNullable();
     table.string("difficulty").notNullable();
   });
 };
