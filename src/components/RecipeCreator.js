@@ -14,6 +14,7 @@ export default function RecipeCreator({ completeFunction }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",
+    time: "",
     servings: undefined,
     prepSteps: "",
     isPublic: false,
@@ -51,11 +52,11 @@ export default function RecipeCreator({ completeFunction }) {
     const currentDate = new Date().toISOString();
     const newRecipe = {
       title,
-      time,
       servings: +servings,
       prepSteps,
       isPublic,
       author,
+      time: +time,
       ingredients,
       edited: currentDate,
       // combine the foodAllergiesSelected and dietaryRestrictionsSelected into tags
@@ -97,7 +98,7 @@ export default function RecipeCreator({ completeFunction }) {
           <TextField
             type="text"
             name="time"
-            placeholder="Time To Prepare"
+            placeholder="Time (minutes)"
             required
             value={time}
             onChange={onChange}
