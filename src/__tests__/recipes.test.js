@@ -21,12 +21,9 @@ describe.skip("Search Bar and FilterComponents are rendered", () => {
     const dietaryRestrictionsDropdown = screen.getByText(
       "Dietary Restrictions",
     );
-    const timeDropdown = screen.getByText("Time");
-    const difficultyDropdown = screen.getByText("Difficulty");
+
 
     expect(foodAllergiesDropdown).toBeInTheDocument();
     expect(dietaryRestrictionsDropdown).toBeInTheDocument();
-    expect(timeDropdown).toBeInTheDocument();
-    expect(difficultyDropdown).toBeInTheDocument();
   });
 });

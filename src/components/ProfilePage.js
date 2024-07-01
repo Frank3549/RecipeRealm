@@ -51,6 +51,7 @@ function ProfilePage() {
             if (!response2.ok) console.error("Failed to fetch authorRecipes");
           }
         } catch (error) {
+          
           console.error("Error fetching recipes:", error);
         } finally {
           setIsLoading(false);
