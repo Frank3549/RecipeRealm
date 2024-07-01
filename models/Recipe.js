@@ -26,7 +26,7 @@ export default class Recipe extends BaseModel {
         author: { type: "integer" },
         edited: { type: "string", format: "date-time" },
         time: { type: "integer", default: "0" },
-        difficulty: { type: "string", default: "Easy (fixed)" },
+        difficulty: { type: "string" },
       },
     };
   }

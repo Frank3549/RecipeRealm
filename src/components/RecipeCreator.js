@@ -33,12 +33,8 @@ export default function RecipeCreator({ completeFunction }) {
   const [difficultySelected, setDifficultySelected] = useState("");
   /* eslint-disable no-unused-vars */
 
-  const timeAndDifficulty = (optionSelected) => {
-    console.log("Difficulty Selected", optionSelected);
-    setDifficultySelected(optionSelected);
-  };
 
-  const { title, time, servings, prepSteps, author, isPublic } = formData;
+  const { title, time, servings, prepSteps, author, isPublic, difficulty } = formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -59,6 +55,7 @@ export default function RecipeCreator({ completeFunction }) {
       time: +time,
       ingredients,
       edited: currentDate,
+      difficulty: difficultySelected,
       // combine the foodAllergiesSelected and dietaryRestrictionsSelected into tags
       tags: [...foodAllergiesSelected, ...dietaryRestrictionsSelected],
     };
@@ -164,8 +161,8 @@ export default function RecipeCreator({ completeFunction }) {
         <Grid item xs={6}>
           <RadioButtonsGroup
             options={difficultyOptions}
-            buttonGroupName="Difficulty"
             visableName="Difficulty"
+            onOptionChange={setDifficultySelected}
           />
         </Grid>
         <Grid item xs={12}>

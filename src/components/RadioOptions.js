@@ -8,16 +8,17 @@ import PropTypes from "prop-types";
 
 export default function RadioButtonsGroup({
   options,
-  buttonGroupName,
   visableName,
+  onOptionChange
 }) {
   return (
     <FormControl>
-      <FormLabel id={buttonGroupName}>{visableName}</FormLabel>
+      <FormLabel id={visableName}>{visableName}</FormLabel>
       <RadioGroup
         aria-labelledby={visableName}
         defaultValue=""
-        name={buttonGroupName}
+        name={visableName}
+        onChange={(event) => onOptionChange(event.target.value)}
       >
         {options.map((option) => (
           <FormControlLabel
@@ -34,6 +35,6 @@ export default function RadioButtonsGroup({
 
 RadioButtonsGroup.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  buttonGroupName: PropTypes.string.isRequired,
   visableName: PropTypes.string.isRequired,
+  onOptionChange: PropTypes.func.isRequired,
 };
