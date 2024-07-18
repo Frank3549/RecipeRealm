@@ -161,7 +161,7 @@ export default function RecipeCreator({ completeFunction }) {
         <Grid item xs={6}>
           <RadioButtonsGroup
             options={difficultyOptions}
-            visableName="Difficulty"
+            visibleName="Difficulty"
             onOptionChange={setDifficultySelected}
           />
         </Grid>
