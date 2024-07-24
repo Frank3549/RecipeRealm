@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -6,14 +5,18 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import PropTypes from "prop-types";
 
-export default function RadioButtonsGroup({ options, visibleName, onOptionChange}) {
-  
+export default function RadioButtonsGroup({
+  options,
+  visibleName,
+  onOptionChange,
+  defaultOption,
+}) {
   return (
     <FormControl>
       <FormLabel id={visibleName}>{visibleName}</FormLabel>
       <RadioGroup
         aria-labelledby={visibleName}
-        defaultValue=""
+        defaultValue={defaultOption}
         name={visibleName}
         onChange={(event) => onOptionChange(event.target.value)}
       >
@@ -34,4 +37,5 @@ RadioButtonsGroup.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   visibleName: PropTypes.string.isRequired,
   onOptionChange: PropTypes.func.isRequired,
+  defaultOption: PropTypes.string.isRequired,
 };

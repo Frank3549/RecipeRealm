@@ -33,8 +33,8 @@ export default function RecipeCreator({ completeFunction }) {
   const [difficultySelected, setDifficultySelected] = useState("");
   /* eslint-disable no-unused-vars */
 
-
-  const { title, time, servings, prepSteps, author, isPublic, difficulty } = formData;
+  const { title, time, servings, prepSteps, author, isPublic, difficulty } =
+    formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -163,6 +163,7 @@ export default function RecipeCreator({ completeFunction }) {
             options={difficultyOptions}
             visibleName="Difficulty"
             onOptionChange={setDifficultySelected}
+            defaultOption={difficultyOptions[0]}
           />
         </Grid>
         <Grid item xs={12}>
