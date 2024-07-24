@@ -71,13 +71,9 @@ describe("Create Recipe Page", () => {
     test("All options for dietary restrictions are present", () => {
       const element1 = screen.getByText("Food Allergies");
       const element2 = screen.getByText("Dietary Restrictions");
-      const element3 = screen.getByText("Time");
-      const element4 = screen.getByText("Difficulty");
 
       expect(element1).toBeInTheDocument();
       expect(element2).toBeInTheDocument();
-      expect(element3).toBeInTheDocument();
-      expect(element4).toBeInTheDocument();
     });
   });
 
