@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useEffect, useState } from "react";
 import { useSession, signOut } from "next-auth/react";

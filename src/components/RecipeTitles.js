@@ -24,7 +24,6 @@ const capitalizeFirstLetter = (string) => {
     .join(" ");
 };
 function RecipeTitles({ recipes, setSelectedRecipe }) {
-
   return (
     <Container>
       <div
@@ -111,6 +110,7 @@ function RecipeTitles({ recipes, setSelectedRecipe }) {
 }
 
 RecipeTitles.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   recipes: PropTypes.arrayOf(PropTypes.object),
   setSelectedRecipe: PropTypes.func,
 };
