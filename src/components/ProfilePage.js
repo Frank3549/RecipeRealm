@@ -44,15 +44,23 @@ function ProfilePage() {
               savedData,
               authorData,
             );
-
             setCombinedRecipes(combined);
             setHasRecipes(combined.length > 0);
+          } else if (response1.ok) {
+            const savedData = await response1.json();
+            setCombinedRecipes(savedData);
+            setHasRecipes(savedData.length > 0);
+            console.error("Failed to fetch authorRecipes or it is empty");
+          } else if (response2.ok) {
+            const authorData = await response2.json();
+            setCombinedRecipes(authorData);
+            setHasRecipes(authorData.length > 0);
+            console.error("Failed to fetch savedRecipes or it is empty");
           } else {
             if (!response1.ok) console.error("Failed to fetch savedRecipes");
             if (!response2.ok) console.error("Failed to fetch authorRecipes");
           }
         } catch (error) {
-          
           console.error("Error fetching recipes:", error);
         } finally {
           setIsLoading(false);
