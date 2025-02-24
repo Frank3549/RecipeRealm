@@ -2,6 +2,9 @@
   "name": "project-killington",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "contributors": [
     "Alex Halaby <ahalaby@middlebury.edu>",
     "Eric Tran <etran@middlebury.edu>",
