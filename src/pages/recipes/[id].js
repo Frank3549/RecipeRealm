@@ -8,10 +8,7 @@ import AlertDialog from "../../components/AlertDialog";
 
 /* eslint-disable no-console  */
 
-
-
 export default function RecipePage() {
-
   const router = useRouter();
   const { data: session } = useSession();
   const [isSaved, setIsSaved] = useState();
@@ -148,7 +145,7 @@ export default function RecipePage() {
   };
 
   const deleteRecipe = async () => {
-    if(session) {
+    if (session) {
       const response = await fetch("/api/recipes/", {
         method: "DELETE",
         headers: {
@@ -168,7 +165,7 @@ export default function RecipePage() {
       alert("Please sign in to remove the recipe.");
       await signIn("google", { callbackUrl: "/recipes" });
     }
-  }
+  };
 
   useEffect(() => {
     const checkIfSaved = async () => {
@@ -238,20 +235,17 @@ export default function RecipePage() {
           </RecipeInfo>
 
           {/* eslint-disable-next-line no-nested-ternary */}
-          {selectedRecipe.author === session.user.id ? (
-            <AlertDialog deleteRecipe={deleteRecipe}/>
+          {session && selectedRecipe.author === session.user.id ? (
+            <AlertDialog deleteRecipe={deleteRecipe} />
+          ) : isSaved ? (
+            <Button onClick={unSaveRecipe} style={buttonStyle}>
+              Unsave Recipe
+            </Button>
           ) : (
-            isSaved ? (
-              <Button onClick={unSaveRecipe} style={buttonStyle}>
-                Unsave Recipe
-              </Button>
-            ) : (
-              <Button onClick={saveRecipe} style={buttonStyle}>
-                Save Recipe
-              </Button>
-            )
+            <Button onClick={saveRecipe} style={buttonStyle}>
+              Save Recipe
+            </Button>
           )}
-
         </RecipeDetailsCard>
       )}
     </Container>
