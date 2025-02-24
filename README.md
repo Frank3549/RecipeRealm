@@ -24,12 +24,16 @@ GOOGLE_CLIENT_ID=SOMEKEY
 
 5.5: If you're on windows you'll likely need to run the following:
 npm run predev (with docker opened)
-npm next dev
+npx next dev
 
-6: With the local development running in a seperate terminal run to migrate and seed the database
+6: With the local development running in a separate terminal run to migrate and seed the database
 npx knex migrate:latest
 npx knex seed:run (should you want our example data)
 
 7: Feel free to stop the development server. You can now run local development with:
 npx next dev (on windows)
 npm run dev (on mac)
+
+Notes for future developement:
+
+Rolling back migrations: npx knex migrate:rollback --all (after stopping docker)
